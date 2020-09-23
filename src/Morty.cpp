@@ -14,18 +14,18 @@ using namespace interdimensional;
 
 args interdimensional::parseArgs(int c, char** v)
 {
-    int i;
-    args pargs{};
+
+    args pargs;
 
     pargs.start = atoi(v[1]);
     pargs.stop = atoi(v[2]);
     pargs.step = 1;
 
     if (c == 4) {
-        if (v[3] == "C137") {
+        if (strcmp(v[3], "C137") == 0) {
             pargs.dim = dimension::C137;
         }
-        else if (v[3] == "Z286") {
+        else if (strcmp(v[3], "Z286") == 0) {
             pargs.dim = dimension::Z286;
         }
         else {
@@ -35,10 +35,10 @@ args interdimensional::parseArgs(int c, char** v)
     else if (c == 5) {
         pargs.step = atoi(v[3]);
 
-        if (v[4] == "C137") {
+        if (strcmp(v[4], "C137") == 0) {
             pargs.dim = dimension::C137;
         }
-        else if (v[4] == "Z286") {
+        else if (strcmp(v[4], "Z286") == 0) {
             pargs.dim = dimension::Z286;
         }
         else {
