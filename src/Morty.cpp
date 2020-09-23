@@ -9,6 +9,7 @@
 
 // Include the Morty header file
 #include "Morty.hpp"
+#include <string.h>
 using namespace std;
 using namespace interdimensional;
 
