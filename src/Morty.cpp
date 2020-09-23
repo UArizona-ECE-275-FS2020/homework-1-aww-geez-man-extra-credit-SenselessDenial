@@ -12,7 +12,7 @@
 using namespace std;
 using namespace interdimensional;
 
-args parseArgs(int c, char** v)
+args interdimensional::parseArgs(int c, char** v)
 {
     int i;
     args pargs{};
